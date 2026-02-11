@@ -19,8 +19,8 @@ def remove_item(my_list, item):
 def pop_item(my_list, index=-1):
     """pops an item from the list at the given index"""
     if my_list: #learned from previous experience
-        my_list.pop(index)
-    return my_list
+        return my_list.pop(index)
+    return None
 
 def clear_list(my_list):
     """clears all items from the list"""
@@ -40,13 +40,13 @@ def reverse_list(my_list):
 def index_of_item(my_list, item):
     """returns the index of the first occurence of the item"""
     try: #learned from researching how to check for error if item not found
-        return [my_list.index(item)]
+        return my_list.index(item)
     except ValueError:
-        return [-1]
+        return -1
 
 def count_item(my_list, item):
     """counts how many times of the item appears in the list"""
-    return [my_list.count(item)]
+    return my_list.count(item)
 
 def slice_list(my_list, start, end):
     """returns a slice of the list from start to end index"""
@@ -70,8 +70,8 @@ def push_stack(stack, item):
 def pop_stack(stack):
     """remove item from the stack"""
     if stack:
-        stack.pop()
-    return stack
+        return stack.pop()
+    return None
 
 def enqueue(queue, item):
     """add item to the queue"""
@@ -81,5 +81,5 @@ def enqueue(queue, item):
 def dequeue(queue):
     """remove an element of a queue"""
     if queue:
-        queue.pop(0)
-    return queue
+        return queue.popleft() #using collections deque which requires popleft, had to research that
+    return None

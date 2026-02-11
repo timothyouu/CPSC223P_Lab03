@@ -80,3 +80,48 @@ def show_menu():
                     break
                 
                 print("***CURRENT LIST: " + str(my_list) + " ***")
+
+        elif choice1 == '2':
+            while True:
+                print("\n*** STACK OPERATIONS ***")
+                print("1. Push item")
+                print("2. Pop item")
+                print("3. Return to Main Menu")
+
+                choice3 = input("Enter your choice: ")
+
+                if choice3 == '1':
+                    item = input("Enter item to push: ")
+                    stack = push_stack(stack, item)
+                    print("***Item '" + str(item) + "' pushed successfully!***")
+                elif choice3 == '2':
+                    stack = pop_stack(stack)
+                    print("***Item popped successfully!***")
+                elif choice3 == '3':
+                    break
+                
+                print("***CURRENT STACK: " + str(stack) + " ***")
+
+        elif choice1 == '3':
+            while True:
+                print("\n*** QUEUE OPERATIONS ***")
+                print("1. Enqueue item")
+                print("2. Dequeue item")
+                print("3. Return to Main Menu")
+
+                choice4 = input("Enter your choice: ")
+
+                if choice4 == '1':
+                    item = input("Enter item to enqueue: ")
+                    queue = enqueue(queue, item)
+                    print("***Item '" + str(item) + "' enqueued successfully!***")
+                elif choice4 == '2':
+                    queue = dequeue(queue)
+                    print("***Item dequeued successfully!***")
+                elif choice4 == '3':
+                    break
+                
+                print("***CURRENT QUEUE: " + str(queue) + " ***")
+        elif choice1 == '4':
+            print("***Exiting program...***")
+            break
