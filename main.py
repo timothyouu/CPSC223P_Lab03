@@ -1,3 +1,9 @@
+# Name: Timothy Ou
+# Date: 02/10/2026
+# Purpose: Created main file that prints the menu and 
+# takes user input to interact with the functions in 
+# the data structures file
+
 from data_structure import *
 
 # menu driven interface with list, stack, and queue operations

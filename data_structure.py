@@ -1,3 +1,8 @@
+# Name: Timothy Ou
+# Date: 02/10/2026
+# Purpose: Created data structure file that contains 
+# all the operations for list, queue, and stack
+
 # 1. Advanced List Operations:
 
 def append_item(my_list, item):
